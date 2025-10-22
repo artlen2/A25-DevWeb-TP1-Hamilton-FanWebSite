@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom */
+@theme {
+  /* Police */
+  --font-dancing: "Dancing Script", serif;
+  /* Couleur */
+  --color-ham: #a16526;
+  --color-hamilton-gold: #d4af37;
+  --color-hamilton-navy: #1a2332;
+}
+
+/* Btn Nav */
+.menu-btn {
+  @apply bg-black text-white border-2 border-transparent hover:border-white border-b-white md:px-2.5 md:py-3 rounded-xl mt-4 md:mt-0 transition-all select-none z-10 relative md:w-fit w-full;
+}
+
+@utility menu-mobile {
+  @apply block absolute left-0 right-0 bg-black border-none top-25 z-10;
+}
+
+/* Formulaires */
+.form-input {
+  @apply shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-white focus:border-white block w-full p-2.5;
+}
+
+.form-label {
+  @apply block mb-2 text-sm font-medium  text-white;
+}
+
+/* Section Main */
+.sect-ham {
+  @apply bg-stone-50 min-h-90 p-6 text-gray-900 py-60;
+}
+
+.sect-ham2 {
+  @apply bg-gray-900 min-h-90 p-6 text-white py-40;
+}
+
+/* Galerie */
+.prj-tile {
+  @apply border-gray-50 hover:border-amber-600 rounded-xl transition-all hover:shadow-xl  border-4  cursor-pointer active:scale-95 bg-amber-50 w-full h-auto;
+}
+
+/* Carte */
+
+.carte {
+  @apply w-full max-w-xs overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg shadow-slate-950/5 text-center my-5 hover:shadow-slate-950/10 transition-all hover:scale-105;
+}
+
+.carte-img {
+  @apply m-1 h-max w-77 rounded-sm;
+}
+
+.carte-div {
+  @apply h-max w-full rounded px-3 py-2 text-center;
+}
+
+.carte-h3 {
+  @apply text-lg font-bold text-gray-900 md:text-xl lg:text-2xl;
+}
+.carte-p {
+  @apply my-1 text-base text-gray-600;
+}
+
+/* A propos - carte */
+
+.info {
+  @apply p-5 mx-10 mb-5 border-3 rounded-2xl shadow-2xs bg-gradient-to-br from-ham to-amber-700 text-white hover:to-amber-800 transition-colors duration-500 items-center text-xl;
+}

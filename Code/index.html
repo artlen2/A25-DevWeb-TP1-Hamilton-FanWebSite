@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="images/x-icon" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js"></script>
+    <title>Hamilton : The Musical</title>
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <header>
+      <div
+        class="flex justify-between items-center p-6 h-32 bg-gradient-to-br bg-black"
+      >
+        <h1 class="text-2xl font-bold text-white select-none">
+          Hamilton : The Musical
+        </h1>
+        <nav class="m-2">
+          <!-- Menu burger -->
+          <input type="checkbox" id="menu-toggle" class="peer hidden" />
+          <label for="menu-toggle" class="md:hidden">
+            <img
+              src="./images/burger.svg"
+              class="w-10 h-auto active:scale-90"
+              alt=""
+            />
+          </label>
+          <!-- Menu Nav -->
+          <ul class="p-5 gap-3 hidden max-md:peer-checked:menu-mobile md:flex">
+            <li class="menu-btn">
+              <a
+                class="block px-2.5 py-3 md:p-0"
+                href="#apropos"
+                onclick="closeMobileMenu()"
+                >À propos</a
+              >
+            </li>
+            <li class="menu-btn">
+              <a
+                class="block px-2.5 py-3 md:p-0"
+                href="#galerie"
+                onclick="closeMobileMenu()"
+                >Galerie</a
+              >
+            </li>
+            <li class="menu-btn">
+              <a
+                class="block px-2.5 py-3 md:p-0"
+                href="#monchoix"
+                onclick="closeMobileMenu()"
+                >Rôles</a
+              >
+            </li>
+            <li class="menu-btn">
+              <a
+                class="block px-2.5 py-3 md:p-0"
+                href="#contact"
+                onclick="closeMobileMenu()"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Slogan Bannière -->
+      <div class="relative h-80 md:h-120 xl:h-200 bg-amber-800 overflow-hidden">
+        <!-- Fond -->
+        <img
+          src="images/bg-ham-silhouettes.jpg"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover select-none"
+        />
+
+        <!-- Overlay Noir -->
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+
+        <!-- Slogan Texte -->
+        <div
+          class="relative z-9 flex items-center justify-center h-full flex-col px-4"
+        >
+          <h2
+            class="sm:text-3xl md:text-4xl xl:text-5xl font-bold text-white text-center font-dancing select-none"
+          >
+            "I am not throwing away my shot,"
+          </h2>
+          <h2
+            class="sm:text-xl md:text-3xl font-bold text-white text-center select-none"
+          >
+            - Lin-Manuel Miranda
+          </h2>
+        </div>
+      </div>
+    </header>
+    <main class="grow">
+      <!-- Section A propos -->
+      <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-4xl md:text-5xl font-playfair font-bold text-center mb-4 text-hamilton-navy"
+          >
+            À propos
+          </h2>
+          <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Une révolution musicale qui a changé Broadway à jamais
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Carte 1 -->
+            <div
+              class="bg-gray-50 rounded-lg p-8 shadow-md card-hover border-t-4 border-hamilton-gold hover:border-hamilton-navy hover:shadow-gray-950/25 duration-500 transition-all"
+            >
+              <h3
+                class="text-2xl font-playfair font-bold mb-4 text-hamilton-navy"
+              >
+                La Création
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Créée en 2015 par Lin-Manuel Miranda, Hamilton est inspirée par
+                la biographie d'Alexander Hamilton écrite par Ron Chernow.
+                Miranda a passé plus de six ans à écrire cette œuvre
+                révolutionnaire qui fusionne l'histoire américaine avec le
+                hip-hop moderne.
+              </p>
+            </div>
+
+            <!-- Carte 2 -->
+            <div
+              class="bg-gray-50 rounded-lg p-8 shadow-md card-hover border-t-4 border-hamilton-gold hover:border-hamilton-navy hover:shadow-gray-950/25 duration-500 transition-all"
+            >
+              <h3
+                class="text-2xl font-playfair font-bold mb-4 text-hamilton-navy"
+              >
+                Style Musical
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Hamilton révolutionne Broadway en utilisant principalement le
+                rap et le hip-hop pour raconter l'histoire des pères fondateurs
+                américains. Le spectacle intègre également du R&B, du jazz et de
+                la musique soul, créant une fusion unique qui parle aux
+                générations actuelles.
+              </p>
+            </div>
+
+            <!-- Carte 3 -->
+            <div
+              class="bg-gray-50 rounded-lg p-8 shadow-md card-hover border-t-4 border-hamilton-gold hover:border-hamilton-navy hover:shadow-gray-950/25 duration-500 transition-all"
+            >
+              <h3
+                class="text-2xl font-playfair font-bold mb-4 text-hamilton-navy"
+              >
+                Impact Culturel
+              </h3>
+              <p class="text-gray-700 leading-relaxed">
+                Hamilton a redéfini la représentation au théâtre en présentant
+                des acteurs de couleur dans les rôles des pères fondateurs. Ce
+                choix délibéré crée une réflexion puissante sur l'identité
+                américaine et rend l'histoire accessible à tous.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- La galerie -->
+      <section id="galerie" class="sect-ham2">
+        <h2
+          class="text-4xl md:text-5xl font-playfair font-bold text-center mb-4 text-gray-50"
+        >
+          Galerie
+        </h2>
+        <p class="text-center text-gray-200 mb-12">
+          Moments iconiques de la production
+        </p>
+        <div class="w-full">
+          <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
+            <li>
+              <img
+                src="./images/crop-galerie/ham-angelica-eliza-peggy.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/king-george.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/army-ham.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/angelica-eliza-peggy.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/ham-kiss-hand-eliza.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/hamilton-lin-aaron-burrjpg.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/ham-other-gens.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/ham-lafayette-hercules.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/king-george1.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/crop-galerie/listening-ham.jpg"
+                alt=""
+                class="prj-tile"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Section - Les membres -->
+      <section id="monchoix" class="sect-ham">
+        <h2
+          class="text-4xl md:text-5xl font-playfair font-bold text-center mb-4 text-hamilton-navy"
+        >
+          Personnels et rôles
+        </h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          Les membres de l'équipe les plus connus
+        </p>
+        <!-- Cartes des membres -->
+        <div
+          class="grid gap-2 grid-cols-2 md:grid-cols-3 xl:grid-cols-5 justify-items-center"
+        >
+          <!-- Lin-Manuel -->
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Alexander_Hamilton.jpg"
+              alt="Lin-Manuel Miranda, Alexander Hamilton"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Alexander Hamilton</h3>
+              <p class="carte-p">Lin-Manuel Miranda</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Eliza_Schuyler_Hamilton.jpg"
+              alt="Phillipa Soo, Eliza Hamilton"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Eliza Hamilton</h3>
+              <p class="carte-p">Phillipa Soo</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Aaron_Burr.jpg"
+              alt="Leslie Odom Jr., Aaron Burr"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Aaron Burr</h3>
+              <p class="carte-p">Leslie Odom Jr.</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Angelica_Schuyler.jpg"
+              alt="Renée Elise Goldsberry, Angelica Schuyler"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Angelica Schuyler</h3>
+              <p class="carte-p">Renée Elise Goldsberry</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/George_Washington.jpg"
+              alt="Christopher Jackson, George Washington"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">George Washington</h3>
+              <p class="carte-p">Christopher Jackson</p>
+            </div>
+          </div>
+          <!-- Kinggg -->
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/King_George3.jpg"
+              alt="Jonathan Groff, King George III"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">King George III</h3>
+              <p class="carte-p">Jonathan Groff</p>
+            </div>
+          </div>
+          <!-- Jefferson & Lafayette :D -->
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Marquis_de_Lafayette.jpg"
+              alt="Daveed Diggs, Marquis de Lafayette"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Marquis de Lafayette</h3>
+              <p class="carte-p">Daveed Diggs</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Thomas_Jefferson.jpg"
+              alt="Daveed Diggs, Thomas Jefferson"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Thomas Jefferson</h3>
+              <p class="carte-p">Daveed Diggs</p>
+            </div>
+          </div>
+          <!-- Hercules :D -->
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/James_Madison.jpg"
+              alt="Okieriete Onaodowan, James Madison"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">James Madison</h3>
+              <p class="carte-p">Okieriete Onaodowan</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Hercules_Mulligan.jpg"
+              alt="Okieriete Onaodowan, Hercules Mulligan"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Hercules Mulligan</h3>
+              <p class="carte-p">Okieriete Onaodowan</p>
+            </div>
+          </div>
+          <!-- RIP -->
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/John_Laurens.jpg"
+              alt="Anthony Ramos, John Laurens"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">John Laurens</h3>
+              <p class="carte-p">Anthony Ramos</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Philip_Hamilton.jpg"
+              alt="Anthony Ramos, Philip Hamilton"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Philip Hamilton</h3>
+              <p class="carte-p">Anthony Ramos</p>
+            </div>
+          </div>
+          <!-- Peggyyyy & Maria :D -->
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Peggy_Schuyler.jpg"
+              alt="Jasmine Cephas Jones, Peggy Schuyler"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Peggy Schuyler</h3>
+              <p class="carte-p">Jasmine Cephas Jones</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Maria_Reynolds1.jpg"
+              alt="Jasmine Cephas Jones, Maria Reynolds"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Maria Reynolds</h3>
+              <p class="carte-p">Jasmine Cephas Jones</p>
+            </div>
+          </div>
+          <!-- Hated characters -->
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Samuel_Seabury.jpg"
+              alt="Thayne Jasperson, Samuel Seabury"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Samuel Seabury</h3>
+              <p class="carte-p">Thayne Jasperson</p>
+            </div>
+          </div>
+          <div class="hidden xl:block"></div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/Charles_Lee1.jpg"
+              alt="Jon Rua, Charles Lee"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">Charles Lee</h3>
+              <p class="carte-p">Jon Rua</p>
+            </div>
+          </div>
+          <!-- Who? -->
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/George_Eacker.jpg"
+              alt="Ephraim Sykes, George Eacker"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">George Eacker</h3>
+              <p class="carte-p">Ephraim Sykes</p>
+            </div>
+          </div>
+          <div class="carte">
+            <img
+              class="carte-img"
+              src="./images/crop-perso/James_Reynolds.jpg"
+              alt="Sydney James Harcourt, James Reynolds"
+            />
+            <div class="carte-div">
+              <h3 class="carte-h3">James Reynolds</h3>
+              <p class="carte-p">Sydney James Harcourt</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white p-6">
+      <h2 class="text-3xl ml-5 mb-5 font-bold">Contact et coordonnées</h2>
+      <div class="flex flex-col justify-center items-center md:flex-row">
+        <div class="text-center md:w-1/2">
+          <!-- Information -->
+          <h1 class="text-3xl">Hamilton : Le Musical</h1>
+          <br />
+          Richard Rodgers Theatre <br />
+          226 W. 46th St. <br />
+          New York, NY 10036
+          <br /><br />
+          North America <br />
+          London <br />
+          UK & Ireland <br />
+          <br />Téléphone :
+          <a href="tel:+4185621240" class="hover:text-amber-400 transition-all"
+            >418 562-1240</a
+          ><br />
+          Courriel :
+          <a
+            href="mailto:support@hamilton.com "
+            class="hover:text-amber-400 transition-all"
+            >support@hamilton.com</a
+          >
+        </div>
+        <!-- Formulaire -->
+        <div class="w-full mt-10 md:w-1/2 md:mt-0">
+          <form class="max-w-sm mx-auto">
+            <!-- Prénom -->
+            <div class="grid md:grid-cols-2 md:gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input
+                  type="text"
+                  name="prenom"
+                  id="prenom"
+                  class="form-input"
+                  placeholder="Aaron"
+                  required
+                />
+              </div>
+              <!-- Nom -->
+              <div class="relative w-full">
+                <label for="nom" class="form-label">Nom</label>
+                <input
+                  type="text"
+                  name="nom"
+                  id="nom"
+                  class="form-input"
+                  placeholder="Burr"
+                  required
+                />
+              </div>
+            </div>
+            <!-- Numéro de téléphone -->
+            <div class="md:grid-cols-2 md:gap-6 mb-5">
+              <div class="relative z-0 w-full mb-5 group">
+                <label for="phone" class="form-label"
+                  >Numéro de téléphone
+                </label>
+                <input
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  name="phone"
+                  id="phone"
+                  class="form-input"
+                  placeholder="(123) 456-7890"
+                  required
+                />
+              </div>
+              <!-- Adresse courriel -->
+              <div class="mb-5">
+                <label for="email" class="form-label"
+                  >Commentaire / Question</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="form-input"
+                  placeholder="nom@gmail.com"
+                  required
+                />
+              </div>
+              <!-- Laisser un message -->
+              <div class="mb-5">
+                <label for="message" class="form-label">Votre message</label>
+                <textarea
+                  rows="4"
+                  class="form-input"
+                  placeholder="Laisser un message..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+              <button
+                type="submit"
+                class="text-black bg-gradient-to-br from-amber-500 to-amber-700 hover:cursor-pointer hover:text-white font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center transition-all block"
+              >
+                Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      &copy; 2025
+    </footer>
+  </body>
+</html>
